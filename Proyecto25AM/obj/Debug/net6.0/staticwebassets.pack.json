@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\0a92185c-a95b-42a5-888e-a9ca29c32b3d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0a92185c-a95b-42a5-888e-a9ca29c32b3d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\2537ebf5-109e-4388-ba38-ad197ce0afd6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2537ebf5-109e-4388-ba38-ad197ce0afd6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\269c86a1-4323-40f2-be19-34857008008a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\269c86a1-4323-40f2-be19-34857008008a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\27525b19-b388-45a4-a47f-8ae8a3f341b9.png",
+      "PackagePath": "staticwebassets\\uploads\\27525b19-b388-45a4-a47f-8ae8a3f341b9.png"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\2c5aae62-1c9f-4759-bb98-1e990e7e60d2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2c5aae62-1c9f-4759-bb98-1e990e7e60d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\2f5a534f-490c-445b-8a95-42b8dd6a9e0a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2f5a534f-490c-445b-8a95-42b8dd6a9e0a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\36bdfdb5-99ae-44df-ae0a-a675e78313a9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\36bdfdb5-99ae-44df-ae0a-a675e78313a9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\501cdfd9-60f5-45d3-bbd0-fc3da6072a8e.png",
+      "PackagePath": "staticwebassets\\uploads\\501cdfd9-60f5-45d3-bbd0-fc3da6072a8e.png"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\7e3d002d-9b72-4ebf-afd0-60fa6d311440.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7e3d002d-9b72-4ebf-afd0-60fa6d311440.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\a8670dee-6b1d-4c4d-bd95-0fda80984e50.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a8670dee-6b1d-4c4d-bd95-0fda80984e50.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\afaf24d4-da49-4936-b5dc-8f9279ccac6e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\afaf24d4-da49-4936-b5dc-8f9279ccac6e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\d32ea9d9-356b-4a7d-a074-cb4addb75d5b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d32ea9d9-356b-4a7d-a074-cb4addb75d5b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\d4960e4d-397f-4da3-a8ba-5f5fcfcd76da.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d4960e4d-397f-4da3-a8ba-5f5fcfcd76da.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\d59a41c5-da20-4a1e-ad56-eb91fdcffec7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d59a41c5-da20-4a1e-ad56-eb91fdcffec7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\da7ec88d-dea2-4319-8f51-10f471e22040.jpg",
+      "PackagePath": "staticwebassets\\uploads\\da7ec88d-dea2-4319-8f51-10f471e22040.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\fceae064-952c-4a79-a622-4e4ed60b55cc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fceae064-952c-4a79-a622-4e4ed60b55cc.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Proyecto25AM.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Proyecto25AM.props",
+      "PackagePath": "build\\Proyecto25AM.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Proyecto25AM.props",
+      "PackagePath": "buildMultiTargeting\\Proyecto25AM.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Proyecto25AM.props",
+      "PackagePath": "buildTransitive\\Proyecto25AM.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

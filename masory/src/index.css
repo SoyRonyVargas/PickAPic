@@ -1,0 +1,32 @@
+
+.container 
+{
+  max-width: 1110px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.custom-grid
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-auto-rows: 250px;
+  grid-row-gap: 10px;
+  grid-column-gap: 16px;
+}
+.grid-item
+{
+  /* -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  page-break-inside: avoid; */
+  padding: 15px;
+  background: #ddd;
+  border-radius: 5px;
+  grid-row-end: span 10;
+  grid-row-end: span 10;
+  margin-bottom: 100px;
+}
+.grid-item > img
+{
+  border-radius: inherit;
+}
