@@ -18,6 +18,6 @@ namespace Proyecto25AM.Context
         public DbSet<Factura> Facturas { get; set; }
         public DbSet<Puesto>Puestos { get; set; }
         public DbSet<Rol> Rols { get; set; }
-        public DbSet<Usuario>Usuarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

@@ -55,6 +55,7 @@ const IndexPage = () => {
                 {
                     images.map( (imagen:any) => (
                         <Card
+                            key={imagen.idImagen}
                             imagen={imagen}
                         />
                     ))

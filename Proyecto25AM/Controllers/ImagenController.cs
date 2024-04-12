@@ -40,6 +40,12 @@ namespace Proyecto25AM.Controllers
                 0 , 1
             }));
         }
+        [HttpGet("listado_usuario/{id}")]
+        public async Task<IActionResult> GetImagenesListado(int id)
+        {
+
+            return Ok(await _imagenServices.GetImagenesPorUsuario(id));
+        }
 
         [HttpPost("upload")]
         public async Task<IActionResult> UploadImage([FromForm] IFormFile ArchivoImagen)

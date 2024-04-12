@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Proyecto25AM.Context;
 using Proyecto25AM.Services.Iservices;
+using System.Diagnostics;
 
 namespace Proyecto25AM.Services.Services
 {
@@ -51,24 +52,32 @@ namespace Proyecto25AM.Services.Services
         {
             try
             {
-                Usuario user = new Usuario()
+               
+                var existe = _context.Usuarios.Where(x => x.Correo == request.Correo).FirstOrDefault();
+
+                if( existe != null )
                 {
-                    User = request.User,
+                    return new Response<Usuario>(null , "Usuario ya registrado");
+                }
+
+                var user = new Usuario() { 
+                    Correo = request.Correo,
+                    Nombre = request.Nombre,
                     Password = request.Password,
-                    FechaRegistro = request.FechaRegistro,
-                    FkEmpleado = request.FkEmpleado,
-                    FkRol = request.FkRol
                 };
 
-                 _context.Usuarios.Add(user);
+                _context.Usuarios.Add(user);
+
                 await _context.SaveChangesAsync();
 
                 return new Response<Usuario>(user);
+
             }
             catch (Exception ex)
             {
                 throw new Exception("Ocurrio un error" + ex.Message);
             }
+
         }
 
         public async Task<Response<Usuario>> ActualizarUsuario([FromBody] UsuarioResponse i , int id)
@@ -76,17 +85,33 @@ namespace Proyecto25AM.Services.Services
             try
             {
                 var res = _context.Usuarios.Find(id);
-                if (res != null)
-                {
-                    res.User= i.User;
-                    res.Password=i.Password;
-                    res.FechaRegistro=i.FechaRegistro;
-                    res.FkEmpleado=i.FkEmpleado;
-                    res.FkRol =i.FkRol;
-                    _context.Usuarios.Update(res);
-                    await _context.SaveChangesAsync();
-                }
+               
                 return new Response<Usuario>(res);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocurrio un error" + ex.Message);
+            }
+        }
+
+        public async Task<Response<Usuario>> AuthLogin(string correo , string password)
+        {
+            try
+            {
+                var res = _context.Usuarios.Where( x=> x.Correo == correo).FirstOrDefault();
+               
+                if( res != null )
+                {
+                    if( res.Password == password )
+                    {
+                     return new Response<Usuario>(res);
+                    }
+                    return new Response<Usuario>(null, "Error de autenticacion");
+
+                }
+
+                return new Response<Usuario>(null , "Error de autenticacion");
+
             }
             catch (Exception ex)
             {

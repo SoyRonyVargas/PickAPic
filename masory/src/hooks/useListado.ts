@@ -1,14 +1,17 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react'
+import { useUser } from '../components/AuthContext'
 
 const useListado = () => {
     const [ isLoading , setLoading ] = useState(false)
     const [ images , setImages ] = useState([])
+    const { user } = useUser()
 
     useEffect( () => {
 
         handleGetImages()
 
-    }, [])
+    }, [user])
 
     const handleGetImages = async () => {
 
@@ -17,7 +20,7 @@ const useListado = () => {
             
             setLoading(true)
 
-            const response = await fetch("http://localhost:5246/Imagen/listado", {
+            const response = await fetch(`http://localhost:5246/Imagen/listado_usuario/${user?.pkUsuario}`, {
                 method: 'GET'
             })
 

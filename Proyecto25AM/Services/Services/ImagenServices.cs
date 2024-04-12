@@ -47,6 +47,31 @@ namespace Proyecto25AM.Services.Services
             }
         }
 
+        public async Task<Response<List<Imagen>>> GetImagenesPorUsuario(int idUsuario)
+        {
+            try
+            {
+
+                Mensaje = "La lista de Imágenes";
+
+                var response = await _context.Imagenes.Where(x => x.IdUsuario == idUsuario).OrderByDescending(x => x.IdImagen).ToListAsync();
+
+                if (response.Count > 0)
+                {
+                    Mensaje = "La lista de Imágenes";
+                    return new Response<List<Imagen>>(response, Mensaje);
+                }
+                else
+                {
+                    return new Response<List<Imagen>>(Mensaje);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Surgió un error: " + ex.Message);
+            }
+        }
+
         public async Task<Response<Imagen>> CrearImagen(CrearImagen request)
         {
             try
@@ -111,10 +136,10 @@ namespace Proyecto25AM.Services.Services
             {
                 if (res != null)
                 {
-                    if( res.status == 1 )
-                    {
-                        return new Response<Imagen>( null , "Error imagen no disponible");
-                    }
+                    //if( res.status == 1 )
+                    //{
+                    //    return new Response<Imagen>( null , "Error imagen no disponible");
+                    //}
 
                     return new Response<Imagen>(res);
                 }

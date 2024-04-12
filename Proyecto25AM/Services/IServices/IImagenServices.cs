@@ -10,6 +10,7 @@ namespace Proyecto25AM.Services.IServices
     public interface IImagenService
     {
         Task<Response<List<Imagen>>> GetImagenes(List<int> status);
+        Task<Response<List<Imagen>>> GetImagenesPorUsuario(int idUsuario);
         Task<Response<Imagen>> CrearImagen(CrearImagen request);
         Task<Response<bool>> ActualizarImagen(EditarImagen request);
         Task<Response<bool>> EliminarImagen(int id);

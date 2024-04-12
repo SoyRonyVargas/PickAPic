@@ -12,6 +12,7 @@ namespace Proyecto25AM.Services.Iservices
 
         public Task<Response<Usuario>> ActualizarUsuario([FromBody] UsuarioResponse i, int id);
         public  Task<Response<Usuario>> EliminarUser(int id);
+        public Task<Response<Usuario>> AuthLogin(string correo, string password);
 
         public ActionResult<Response<Usuario>> ObtenerUserId(int id);
     }

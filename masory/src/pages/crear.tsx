@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ImageUploading from 'react-images-uploading';
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { useForm } from '../hooks/useForm';
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { useUser } from '../components/AuthContext';
 
 const CrearPage = () => {
 
@@ -15,7 +16,24 @@ const CrearPage = () => {
         categoria: ''
     }
     const [images, setImages] = React.useState<any>([]);
+    const { user } = useUser()
 
+    useLayoutEffect( () => {
+
+        if( user === null )
+        {
+            window.location.href = '/login'    
+        }
+
+    }, [])
+    useEffect( () => {
+
+        if( user === null )
+        {
+            window.location.href = '/login'    
+        }
+
+    }, [])
     const handleSubmit = async ( payload : any ) => {
 
         try {
@@ -69,6 +87,7 @@ const CrearPage = () => {
                 Descripcion:payload.descripcion,
                 UrlImagen:filePath,
                 Categoria: payload.categoria,
+                IdUsuario: user?.pkUsuario ?? 0
             })
 
             await Swal.fire({

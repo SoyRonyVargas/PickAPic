@@ -8,7 +8,7 @@ export const useForm = <T>( initialForm : T , validations : any = {} , cb : Func
     const [ formState, setFormState ] = useState<T>( initialForm );
     const [ submited , setSubmited ] = useState<boolean>(false)
     const [ errors , setErrors ] = useState<{ [x:string]: string }>();
-
+    
     useEffect( () => {
 
         // createValidators()

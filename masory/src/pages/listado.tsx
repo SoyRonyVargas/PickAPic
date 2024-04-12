@@ -4,10 +4,30 @@ import useListado from "../hooks/useListado"
 import axios from 'axios'
 import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
+import { useContext, useEffect, useLayoutEffect } from "react";
+import { UserContext } from "../components/AuthContext";
 
 const ListadoPage = () => {
 
     const { images, isLoading } = useListado()
+    const { user } = useContext(UserContext)
+
+    useLayoutEffect( () => {
+
+        if( user === null )
+        {
+            window.location.href = '/login'    
+        }
+
+    }, [])
+    useEffect( () => {
+
+        if( user === null )
+        {
+            window.location.href = '/login'    
+        }
+
+    }, [])
 
     const handleFormat = ( fechaRecive:string ) => {
 
@@ -55,7 +75,7 @@ const ListadoPage = () => {
     }
 
     return (
-        <section className="container max-w-[1100px] mx-auto py-8">
+        <section className="container max-w-[1100px] mx-auto py-8 min-h-[100vh]">
 
             <h2 className="text-3xl font-bold">Publicaciones</h2>
 
@@ -94,7 +114,7 @@ const ListadoPage = () => {
                     </thead>
                     <tbody>
                         {
-                            images.map( (imagen:any) => (
+                            images?.map( (imagen:any) => (
                                 <tr className="bg-white border-b text-black">
                                     <th
                                         scope="row"
@@ -129,11 +149,11 @@ const ListadoPage = () => {
                                             imagen.status == 0
                                             ?
                                             <span className="bg-green-500 font-semibold p-2 px-3 text-white  rounded-lg"> 
-                                            Activo
+                                            Publico
                                              </span>
                                         :
                                         <span className="bg-red-500 font-semibold p-2 px-3 text-white rounded-lg"> 
-                                            Inactivo
+                                            Privado
                                         </span>
                                         }
                                       

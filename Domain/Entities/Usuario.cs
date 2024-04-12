@@ -12,18 +12,9 @@ namespace Domain.Entities
     {
         [Key]
         public int PkUsuario { get; set; }
-        public string User { get; set; }
+        public string Nombre { get; set; }
+        public string Correo { get; set; }
         public string Password { get; set; }
         public DateTime FechaRegistro { get; set; }
-
-        [ForeignKey("Empleado")]
-        public int FkEmpleado { get; set; }
-
-        [ForeignKey("Rol")]
-        public int FkRol { get; set; }
-
-        public Empleado Empleado { get; set; }
-        public Rol Rol { get; set; }
-
     }
 }

@@ -5,7 +5,7 @@ const NotFound = () => {
             <img
                 src="/404.svg"
                 alt=""
-                className="mx-auto max-w-[900px]"
+                className="mx-auto max-w-[900px] h-[300px]"
             />
             <h1 className="text-5xl text-center font-bold mt-5">Articulo no disponible</h1>
 

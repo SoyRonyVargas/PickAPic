@@ -1,10 +1,17 @@
 import NotFound from "../components/404"
+import Loader from "../components/Loader"
 import usePost from "../hooks/usePost"
 
 const ArticuloPorId = () => {
 
-    const { articulo } = usePost()
+    const { articulo , loading } = usePost()
 
+    if( loading ) return (
+
+        <div className="container max-w-[1100px] mx-auto py-8">
+            <Loader/>
+        </div>
+    )
     return (
         <div className="container max-w-[1100px] mx-auto py-8">
             {/* header ends here */}
@@ -30,12 +37,18 @@ const ArticuloPorId = () => {
                                 className="w-full  z-0 object-cover rounded-lg" />
 
                         </div><div className="px-4 lg:px-0 w-full text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
-                                <a
-                                    href="#"
-                                    className="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2"
+                        {
+                             articulo.status == 1 && <a
+                             className="px-4 mr-4 py-1 block bg-red-600 text-gray-200 inline-flex items-center justify-center mb-2"
+                         >
+                             Privado
+                         </a>
+                        }
+                                <div
+                                    className="block px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2"
                                 >
                                     {articulo?.categoria}
-                                </a>
+                                </div>
                                 <h2 className="text-4xl font-semibold text-black leading-tight mb-3">
                                     {articulo?.nombreImagen}
                                 </h2>
