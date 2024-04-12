@@ -7,6 +7,7 @@ using Proyecto25AM.Context;
 using Proyecto25AM.Services.IServices;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace Proyecto25AM.Services.Services
@@ -21,13 +22,14 @@ namespace Proyecto25AM.Services.Services
             _context = context;
         }
 
-        public async Task<Response<List<Imagen>>> GetImagenes()
+        public async Task<Response<List<Imagen>>> GetImagenes(List<int> status)
         {
             try
             {
+                
                 Mensaje = "La lista de Imágenes";
 
-                var response = await _context.Imagenes.OrderByDescending(x => x.IdImagen).ToListAsync();
+                var response = await _context.Imagenes.Where( x => status.Contains(x.status) ).OrderByDescending(x => x.IdImagen).ToListAsync();
 
                 if (response.Count > 0)
                 {
@@ -71,6 +73,35 @@ namespace Proyecto25AM.Services.Services
             }
         }
 
+        public async Task<Response<bool>> ActualizarImagen(EditarImagen request)
+        {
+            try
+            {
+
+                var imagenActualizar = _context.Imagenes.Where(x => x.IdImagen == request.IdImagen).FirstOrDefault();
+                if( imagenActualizar == null )
+                {
+                    return new Response<bool>(false, "No valido");
+                }
+
+                imagenActualizar.status = request.status;
+                
+                imagenActualizar.Descripcion = request.Descripcion;
+               
+                imagenActualizar.Categoria = request.Categoria;
+                
+                imagenActualizar.NombreImagen = request.NombreImagen;
+
+                await _context.SaveChangesAsync();
+
+                return new Response<bool>(true, "No valido");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocurrió un error: " + ex.Message);
+            }
+        }
+
         // Resto de las funciones CRUD...
 
         public ActionResult<Response<Imagen>> ObtenerImagenPorId(int id)
@@ -80,7 +111,32 @@ namespace Proyecto25AM.Services.Services
             {
                 if (res != null)
                 {
-                    res = _context.Imagenes.FirstOrDefault(x => x.IdImagen == id);
+                    if( res.status == 1 )
+                    {
+                        return new Response<Imagen>( null , "Error imagen no disponible");
+                    }
+
+                    return new Response<Imagen>(res);
+                }
+                else
+                {
+                    Mensaje = "No se encontró ningún registro";
+                    return new Response<Imagen>(Mensaje);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Surgió un error: " + ex.Message);
+            }
+        }
+
+        public ActionResult<Response<Imagen>> ObtenerImagenPorIdLimpio(int id)
+        {
+            var res = _context.Imagenes.Find(id);
+            try
+            {
+                if (res != null)
+                {
                     return new Response<Imagen>(res);
                 }
                 else
@@ -100,11 +156,7 @@ namespace Proyecto25AM.Services.Services
             throw new NotImplementedException();
         }
 
-        public Task<Response<Imagen>> ActualizarImagen(CrearImagen request, int id)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         public async Task<Response<bool>> EliminarImagen(int id)
         {
             try

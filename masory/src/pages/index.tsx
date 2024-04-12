@@ -15,7 +15,7 @@ const IndexPage = () => {
                 id="up"
                 className="bg-center bg-fixed bg-no-repeat bg-center bg-cover h-[70vh] relative"
                 style={{
-                    backgroundImage: 'url(/hero.jpg)'
+                    backgroundImage: 'url(/hero.webp)'
                 }}
             >
                 {/* Overlay Background + Center Control */}
@@ -37,11 +37,11 @@ const IndexPage = () => {
             </header>
 
             <div className="container max-w-[1100px] mx-auto py-8">
-            <div className='flex items-center justify-between'>
+            <div className='md:flex items-center justify-between'>
                 
                 <h2 className='text-4xl font-semibold'>Ultimas Publicaciones</h2>
 
-                <a href='/crear' className='p-2 px-8 bg-blue-700 rounded-lg text-white font-semibold'>
+                <a href='/crear' className='mt-5 text-center block p-2 px-8 bg-blue-700 rounded-lg text-white font-semibold'>
                     Crear Imagen
                 </a>
 
@@ -51,8 +51,7 @@ const IndexPage = () => {
             {
                 !isLoading
                 ?
-                <div className="columns-4 gap-8 ">
-                
+                <div className="columns-1 md:columns-4 gap-8 ">
                 {
                     images.map( (imagen:any) => (
                         <Card

@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import useListado from "../hooks/useListado"
 import axios from 'axios'
 import Loader from "../components/Loader";
+import { Link } from "react-router-dom";
 
 const ListadoPage = () => {
 
@@ -65,9 +66,12 @@ const ListadoPage = () => {
                {
                     !isLoading
                     ?
-                    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <table className="w-full text-sm text-left rtl:text-right text-gray-500">
                     <thead className="text-xs text-gray-700 uppercase bg-white-50 ">
                         <tr>
+                            <th scope="col" className="px-6 py-3">
+                                ID
+                            </th>
                             <th scope="col" className="px-6 py-3">
                                 Titulo
                             </th>
@@ -78,7 +82,7 @@ const ListadoPage = () => {
                                 Categoria
                             </th>
                             <th scope="col" className="px-6 py-3">
-                                Likes
+                                Status
                             </th>
                             <th scope="col" className="px-6 py-3">
                                 Creado
@@ -97,8 +101,18 @@ const ListadoPage = () => {
                                         className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-black"
                                     >
                                         {
+                                            imagen.idImagen
+                                        }
+                                    </th>
+                                    <th
+                                        scope="row"
+                                        className="max-w-[200px] px-6 py-4 font-medium text-gray-900 text-black"
+                                    >
+<p>
+{
                                             imagen.nombreImagen
                                         }
+</p>
                                     </th>
                                     <td className="px-6 py-4">
                                     {
@@ -112,18 +126,33 @@ const ListadoPage = () => {
                                     </td>
                                     <td className="px-6 py-4">
                                     {
-                                            imagen.likes
+                                            imagen.status == 0
+                                            ?
+                                            <span className="bg-green-500 font-semibold p-2 px-3 text-white  rounded-lg"> 
+                                            Activo
+                                             </span>
+                                        :
+                                        <span className="bg-red-500 font-semibold p-2 px-3 text-white rounded-lg"> 
+                                            Inactivo
+                                        </span>
                                         }
+                                      
                                     </td>
                                     <td className="px-6 py-4">
                                     {
                                             handleFormat(imagen.fechaCarga)
                                         }
                                     </td>
-                                    <td className="px-6 py-4">
-                                        <button onClick={ () => handleDelete(imagen.idImagen)} className="p-3 px-8 bg-red-500 rounded-lg text-white font-semibold">
-                                            Eliminar
+                                    <td className="px-6 py-4 ">
+                                        <button onClick={ () => handleDelete(imagen.idImagen)} className="block mb-3 p-2 px-5 mr-3 bg-red-500 rounded-lg text-white font-semibold">
+                                        Eliminar
                                         </button>
+                                        <Link to={`/listado/edit/${imagen.idImagen}`} className="block mb-3 text-center p-2 mr-3 px-5 bg-yellow-500 rounded-lg text-black font-semibold">
+                                              Editar
+                                        </Link>
+                                        <a href={`/articulo/${imagen.idImagen}`} className="py-2 text-center px-3 block bg-blue-500 rounded-lg text-white font-semibold">
+                                            Ver
+                                        </a>
                                     </td>
                                 </tr>
                             ))

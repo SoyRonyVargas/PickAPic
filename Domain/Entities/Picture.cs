@@ -18,5 +18,6 @@ namespace Domain.Entities
         public DateTime FechaCarga { get; set; }
         public string Categoria { get; set; }
         public int Likes { get; set; }
+        public int status { get; set; }
     }
 }

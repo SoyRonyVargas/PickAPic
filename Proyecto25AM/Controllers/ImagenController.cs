@@ -19,10 +19,26 @@ namespace Proyecto25AM.Controllers
         {
             return Ok(await _imagenServices.CrearImagen(i));
         }
+
+        [HttpPut]
+        public async Task<IActionResult> Editar([FromBody] EditarImagen i)
+        {
+            return Ok(await _imagenServices.ActualizarImagen(i));
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetImagenes()
         {
-            return Ok(await _imagenServices.GetImagenes());
+            return Ok(await _imagenServices.GetImagenes(new List<int>() { 0 }));
+        }
+        [HttpGet("listado")]
+        public async Task<IActionResult> GetImagenesListado()
+        {
+           
+            return Ok(await _imagenServices.GetImagenes(new List<int>()
+            {
+                0 , 1
+            }));
         }
 
         [HttpPost("upload")]
@@ -81,6 +97,11 @@ namespace Proyecto25AM.Controllers
         public ActionResult ObtenerFacID(int id)
         {
             return Ok(_imagenServices.ObtenerImagenPorId(id));
+        }
+        [HttpGet("limpio/{id}")]
+        public ActionResult ObtenerPorIdLimpio(int id)
+        {
+            return Ok(_imagenServices.ObtenerImagenPorIdLimpio(id));
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "asC6St1gxkqNL6+442/gFXA1rGu/sMkUej5eMY71ouA=",
+  "Hash": "GFCpyjZO3oh96774CFJfmwXeq5+ARzdBjv6z2isLXD4=",
   "Source": "Proyecto25AM",
   "BasePath": "_content/Proyecto25AM",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\0407d087-469f-4476-88be-43754c58c2aa.jpg",
+      "SourceId": "Proyecto25AM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\",
+      "BasePath": "_content/Proyecto25AM",
+      "RelativePath": "uploads/0407d087-469f-4476-88be-43754c58c2aa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\0407d087-469f-4476-88be-43754c58c2aa.jpg"
+    },
     {
       "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\0a92185c-a95b-42a5-888e-a9ca29c32b3d.jpg",
       "SourceId": "Proyecto25AM",
@@ -153,6 +170,40 @@
       "OriginalItemSpec": "wwwroot\\uploads\\501cdfd9-60f5-45d3-bbd0-fc3da6072a8e.png"
     },
     {
+      "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\71186900-cf80-45a8-9892-5f10b2947a3a.jpg",
+      "SourceId": "Proyecto25AM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\",
+      "BasePath": "_content/Proyecto25AM",
+      "RelativePath": "uploads/71186900-cf80-45a8-9892-5f10b2947a3a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\71186900-cf80-45a8-9892-5f10b2947a3a.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\73c3d25a-f5fa-44ab-9e9c-dd88358415cb.jpeg",
+      "SourceId": "Proyecto25AM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\",
+      "BasePath": "_content/Proyecto25AM",
+      "RelativePath": "uploads/73c3d25a-f5fa-44ab-9e9c-dd88358415cb.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\73c3d25a-f5fa-44ab-9e9c-dd88358415cb.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\7e3d002d-9b72-4ebf-afd0-60fa6d311440.jpg",
       "SourceId": "Proyecto25AM",
       "SourceType": "Discovered",
@@ -168,6 +219,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\7e3d002d-9b72-4ebf-afd0-60fa6d311440.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\7f2f1118-c6ac-496c-baa5-0cf5506ae5c1.jpeg",
+      "SourceId": "Proyecto25AM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\",
+      "BasePath": "_content/Proyecto25AM",
+      "RelativePath": "uploads/7f2f1118-c6ac-496c-baa5-0cf5506ae5c1.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\7f2f1118-c6ac-496c-baa5-0cf5506ae5c1.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\a494955f-0fec-4fd4-a2ca-e53b6ffca884.jpg",
+      "SourceId": "Proyecto25AM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\",
+      "BasePath": "_content/Proyecto25AM",
+      "RelativePath": "uploads/a494955f-0fec-4fd4-a2ca-e53b6ffca884.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a494955f-0fec-4fd4-a2ca-e53b6ffca884.jpg"
     },
     {
       "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\a8670dee-6b1d-4c4d-bd95-0fda80984e50.jpg",
@@ -202,6 +287,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\afaf24d4-da49-4936-b5dc-8f9279ccac6e.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\b2fb67ba-aa1c-42e6-b75c-97601b605c1f.png",
+      "SourceId": "Proyecto25AM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\",
+      "BasePath": "_content/Proyecto25AM",
+      "RelativePath": "uploads/b2fb67ba-aa1c-42e6-b75c-97601b605c1f.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b2fb67ba-aa1c-42e6-b75c-97601b605c1f.png"
     },
     {
       "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\d32ea9d9-356b-4a7d-a074-cb4addb75d5b.jpg",
@@ -270,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\da7ec88d-dea2-4319-8f51-10f471e22040.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\e4d88342-ea19-408f-a2b2-b683a5a73b66.jpeg",
+      "SourceId": "Proyecto25AM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\",
+      "BasePath": "_content/Proyecto25AM",
+      "RelativePath": "uploads/e4d88342-ea19-408f-a2b2-b683a5a73b66.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e4d88342-ea19-408f-a2b2-b683a5a73b66.jpeg"
     },
     {
       "Identity": "C:\\Users\\Darth\\Documents\\GitHub\\Proyecto25AM\\Proyecto25AM\\wwwroot\\uploads\\fceae064-952c-4a79-a622-4e4ed60b55cc.jpg",

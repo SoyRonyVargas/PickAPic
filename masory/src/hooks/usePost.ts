@@ -23,6 +23,7 @@ const usePost = () => {
             setLoading(true)
             
             const { data } = await axios.get(`http://localhost:5246/Imagen/${id}`)
+
             setArticulo(data.value.result)
 
             setLoading(false)

@@ -174,6 +174,9 @@ namespace Proyecto25AM.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("status")
+                        .HasColumnType("int");
+
                     b.HasKey("IdImagen");
 
                     b.ToTable("Imagenes");

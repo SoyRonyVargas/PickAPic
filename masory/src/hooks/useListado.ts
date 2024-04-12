@@ -17,7 +17,7 @@ const useListado = () => {
             
             setLoading(true)
 
-            const response = await fetch("http://localhost:5246/Imagen", {
+            const response = await fetch("http://localhost:5246/Imagen/listado", {
                 method: 'GET'
             })
 
@@ -25,7 +25,7 @@ const useListado = () => {
 
             setImages(data.result)
 
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolve, 1000));
 
             setLoading(false)
         }

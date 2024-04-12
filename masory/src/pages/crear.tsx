@@ -19,6 +19,38 @@ const CrearPage = () => {
     const handleSubmit = async ( payload : any ) => {
 
         try {
+
+            if( payload.nombre.trim().length === 0 )
+            {
+                return await Swal.fire({
+                    title: 'Ingresa un nombre valido',
+                    icon: 'error',
+                })
+            }
+            
+            if( payload.descripcion.trim().length === 0 )
+            {
+                return await Swal.fire({
+                    title: 'Ingresa una descripcion valida',
+                    icon: 'error',
+                })
+            }
+            
+            if( payload.categoria.trim().length === 0 )
+            {
+                return await Swal.fire({
+                    title: 'Ingresa una categoria valida',
+                    icon: 'error',
+                })
+            }
+           
+            if( images.length === 0 )
+            {
+                return await Swal.fire({
+                    title: 'Ingresa al menos una imagen' ,
+                    icon: 'error',
+                })
+            }
             
             const formData = new FormData();
             
@@ -56,7 +88,6 @@ const CrearPage = () => {
 
     const { handleSubmitForm , onInputChange, formState } = useForm(initialState , [] , handleSubmit )
 
-    
     const maxNumber = 69;
 
     const onChange = (imageList:any, addUpdateIndex:any) => {
@@ -66,7 +97,7 @@ const CrearPage = () => {
     };
 
     return (
-        <div className="container max-w-[1100px] mx-auto py-8">
+        <div className="container max-w-[1100px] mx-auto py-8 min-h-[100vh]">
 
         <div className="mx-auto flex items-center justify-center p-12 bg-white block max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow">
             {/* Author: FormBold Team */}

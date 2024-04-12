@@ -12,7 +12,7 @@ namespace Domain.Dto
         {
 
         }
-        public Response(T data, string message=null)
+        public Response(object data, string message=null)
         {
             Succeded = true;
             Message = message;
@@ -27,7 +27,7 @@ namespace Domain.Dto
 
         public bool Succeded { get; set; }
         public string Message { get; set; }
-        public T Result { get; set; }
+        public object Result { get; set; }
 
     }
 }
